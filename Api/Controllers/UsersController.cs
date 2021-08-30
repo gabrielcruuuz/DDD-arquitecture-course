@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
+using Api.Domain.Dtos;
+using Api.Domain.Dtos.User;
 
 namespace Api.Application.Controllers
 {
@@ -44,7 +47,13 @@ namespace Api.Application.Controllers
 
             try
             {
-                return Ok(await _service.Get(id));
+                var user = await _service.Get(id);
+
+                if (user != null)
+                    return Ok(await _service.Get(id));
+                else
+                    return StatusCode((int)HttpStatusCode.NotFound, "Usuario não encontrado");
+
             }
             catch (ArgumentException e)
             {
@@ -52,8 +61,9 @@ namespace Api.Application.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] UserEntity user)
+        public async Task<ActionResult> Post([FromBody] UserDtoCreate user)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState); //codigo 400 - solicitação invalida
@@ -76,8 +86,9 @@ namespace Api.Application.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpPut]
-        public async Task<ActionResult> Put([FromBody] UserEntity user)
+        public async Task<ActionResult> Put([FromBody] UserDtoUpdate user)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState); //codigo 400 - solicitação invalida
@@ -97,6 +108,7 @@ namespace Api.Application.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(Guid id)
         {

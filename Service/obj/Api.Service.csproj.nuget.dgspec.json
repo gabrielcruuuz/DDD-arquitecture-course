@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Service\\Api.Service.csproj": {}
+    "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Service\\Api.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Domain\\Api.Domain.csproj": {
+    "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Domain\\Api.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj",
         "projectName": "Api.Domain",
-        "projectPath": "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Domain\\Api.Domain.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj",
+        "packagesPath": "C:\\Users\\discover\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\discover\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +38,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.12.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,24 +60,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Service\\Api.Service.csproj": {
+    "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Service\\Api.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Service\\Api.Service.csproj",
+        "projectUniqueName": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Service\\Api.Service.csproj",
         "projectName": "Api.Service",
-        "projectPath": "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Service\\Api.Service.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Service\\obj\\",
+        "projectPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Service\\Api.Service.csproj",
+        "packagesPath": "C:\\Users\\discover\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\discover\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,9 +86,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Domain\\Api.Domain.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Desktop\\workspaces\\Back-End\\Curso DDD\\DDD\\Domain\\Api.Domain.csproj"
+              "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj": {
+                "projectPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj"
               }
             }
           }
@@ -99,6 +102,17 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -114,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

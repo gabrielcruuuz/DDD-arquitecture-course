@@ -12,10 +12,10 @@ namespace Api.Data.Context
         public DbSet<UserEntity> Users { get; set; }
 
         public MyContext()
-        {}
+        { }
 
-        public MyContext(DbContextOptions<MyContext> options) : base (options)
-        {}
+        public MyContext(DbContextOptions<MyContext> options) : base(options)
+        { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,6 +26,17 @@ namespace Api.Data.Context
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<UserEntity>(new UserMap().Configure);
+
+            modelBuilder.Entity<UserEntity>().HasData(
+                new UserEntity
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Administrador",
+                    Email = "adm@teste.com",
+                    CreateAt = DateTime.UtcNow,
+                    UpdateAt = DateTime.UtcNow
+                }
+            );
         }
     }
 }
