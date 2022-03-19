@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj": {}
+    "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Api.Data.Test\\Api.Data.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj": {
+    "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Api.Data.Test\\Api.Data.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj",
-        "projectName": "Api.Domain",
-        "projectPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\Api.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Api.Data.Test\\Api.Data.Test.csproj",
+        "projectName": "Api.Data.Test",
+        "projectPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Api.Data.Test\\Api.Data.Test.csproj",
         "packagesPath": "C:\\Users\\discover\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Api.Data.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\discover\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,21 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "System.IdentityModel.Tokens.Jwt": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[6.12.1, )"
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             }
           },
           "imports": [
