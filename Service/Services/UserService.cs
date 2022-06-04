@@ -7,6 +7,7 @@ using Api.Domain.Repository;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Api.Service.Services
@@ -28,6 +29,22 @@ namespace Api.Service.Services
 
         public async Task<UserDto> Get(Guid id)
         {
+
+            var t = "There Will, be blood?";
+
+            var filterT = t.Replace(",", "").Replace("?", "").Split(" ");
+
+            filterT = filterT.OrderByDescending(x => x.Length).ToArray();
+
+            var tt = filterT[0];
+
+            var wordWithMaxSize = "";
+            for (int i = 0; i < filterT.Length; i++)
+            {
+                if (filterT[i].Length > wordWithMaxSize.Length)
+                    wordWithMaxSize = filterT[i];
+            }
+
             var entity = await _repository.SelectAsync(id);
             return _mapper.Map<UserDto>(entity) ?? null;
         }

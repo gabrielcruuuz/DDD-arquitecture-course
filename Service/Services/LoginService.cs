@@ -97,6 +97,7 @@ namespace Api.Service.Services
                 expiration = expirationDate.ToString("yyyy-MM-dd HH:mm:ss"),
                 acessToken = token,
                 email = user.Email,
+                name = user.Name
             };
         }
     }
