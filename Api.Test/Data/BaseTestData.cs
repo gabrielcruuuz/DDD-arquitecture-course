@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using System;
 using Xunit;
 
-namespace Api.Test
+namespace Api.Test.Data
 {
     public abstract class BaseTestData
     {

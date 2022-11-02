@@ -14,9 +14,7 @@ namespace Api.CrossCutting.DependencyInjection
             serviceColletion.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             serviceColletion.AddScoped<IUserRepository, UserRepository>();
 
-            var t = Environment.GetEnvironmentVariables();
-
-            if (Environment.GetEnvironmentVariable("DATABASE").ToLower() == "SQLSERVER".ToLower())
+            if (Environment.GetEnvironmentVariable("DATABASE").ToUpper() == "SQLSERVER")
             {
                 serviceColletion.AddDbContext<MyContext>(
                   options => options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION").ToLower())

@@ -6,7 +6,7 @@ namespace Api.CrossCutting.DependencyInjection
 {
     public class ConfigureAutoMapper
     {
-        public static void ConfigureMapper(IServiceCollection serviceColletion)
+        public static IMapper ConfigureMapper()
         {
 
             var config = new MapperConfiguration(c =>
@@ -18,8 +18,7 @@ namespace Api.CrossCutting.DependencyInjection
 
             IMapper mapper = config.CreateMapper();
 
-            serviceColletion.AddSingleton(mapper);
-
+            return mapper;
         }
 
     }

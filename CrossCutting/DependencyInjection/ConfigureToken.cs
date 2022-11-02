@@ -15,14 +15,7 @@ namespace Api.CrossCutting.DependencyInjection
         public static void ConfigureDependenciesToken(IServiceCollection serviceColletion, IConfiguration configuration)
         {
             SigningConfiguration signingConfiguration = new SigningConfiguration();
-            serviceColletion.AddSingleton(signingConfiguration);
-
-            var tokenConfiguration = new TokenConfiguration();
-
-            new ConfigureFromConfigurationOptions<TokenConfiguration>(
-                configuration.GetSection("TokenConfigurations")).Configure(tokenConfiguration);
-
-            serviceColletion.AddSingleton(tokenConfiguration);
+            serviceColletion.AddSingleton(signingConfiguration);           
 
             serviceColletion.AddAuthentication(authOption =>
             {
@@ -32,8 +25,8 @@ namespace Api.CrossCutting.DependencyInjection
             {
                 var paramsValidation = bearerOptions.TokenValidationParameters;
                 paramsValidation.IssuerSigningKey = signingConfiguration.Key;
-                paramsValidation.ValidAudience = tokenConfiguration.Audience;
-                paramsValidation.ValidIssuer = tokenConfiguration.Issuer;
+                paramsValidation.ValidAudience = Environment.GetEnvironmentVariable("TokenAudience");
+                paramsValidation.ValidIssuer = Environment.GetEnvironmentVariable("TokenIssuer");
                 paramsValidation.ValidateIssuerSigningKey = true;
                 paramsValidation.ValidateLifetime = true;
                 paramsValidation.ClockSkew = TimeSpan.Zero;

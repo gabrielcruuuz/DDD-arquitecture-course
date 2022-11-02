@@ -12,20 +12,33 @@ namespace Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            _environment = environment;
         }
 
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment _environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //configuração para os teste integrados
+            if (_environment.IsEnvironment("Testing"))
+            {
+                Environment.SetEnvironmentVariable("DB_CONNECTION", "Server=localhost\\SQLEXPRESS;Database=DDD_Integration;user=gabrielCruz;password=56210160Casa");
+                Environment.SetEnvironmentVariable("DATABASE", "SQLSERVER");
+                Environment.SetEnvironmentVariable("TokenAudience", "ExemploAudience");
+                Environment.SetEnvironmentVariable("TokenSeconds", "3600");
+                Environment.SetEnvironmentVariable("TokenIssuer", "ExemploIssuer");
+            }
+
             ConfigureService.ConfigureDependenciesService(services);
             ConfigureRepository.ConfigureDependenciesRepository(services);
             ConfigureToken.ConfigureDependenciesToken(services, Configuration);
-            ConfigureAutoMapper.ConfigureMapper(services);
+            services.AddSingleton(ConfigureAutoMapper.ConfigureMapper()); 
 
             services.AddControllers();
 

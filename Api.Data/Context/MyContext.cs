@@ -19,7 +19,7 @@ namespace Api.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=DDD;user=gabrielCruz;password=56210160Casa");
+            optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace Api.Data.Context
                 {
                     Id = Guid.NewGuid(),
                     Name = "Administrador",
-                    Email = "adm@teste.com",
+                    Email = "adm@hotmail.com",
                     CreateAt = DateTime.UtcNow,
                     UpdateAt = DateTime.UtcNow
                 }
