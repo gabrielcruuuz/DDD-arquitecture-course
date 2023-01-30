@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GBWzWebwKDw3x709m4Dqf7aKbtzNplntLm0+iSXW4YVQk1+5bBWnAO3gDSJjXt9S0QGnJBA8TSO25NQKVthJ+Q==",
+  "dgSpecHash": "0kbTf6qu13LP5oJ6JOUXgUJj2UzwjmSUVYe3n+lk2xxOmHSKgy3ChHJSIDV7/keUqDogz2veaS8SZWeIGRHHEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\discover\\Desktop\\workspaces\\DDD-arquitecture-course\\Api\\Api.Application.csproj",
   "expectedPackageFiles": [
@@ -213,8 +213,7 @@
     "C:\\Users\\discover\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\discover\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\discover\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\discover\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\discover\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+    "C:\\Users\\discover\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
